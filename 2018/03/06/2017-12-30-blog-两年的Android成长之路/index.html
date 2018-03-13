@@ -1,0 +1,528 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- Head tag -->
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="google-site-verification" content="xBT4GhYoi5qRD5tr338pgPM5OWHHIDR6mNg1a3euekI" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="keyword"  content="ymlt, shuxin.wei Blog, 魏树鑫的博客, 一亩良田, 魏树鑫, android, java, yimuliangtian">
+    <link rel="shortcut icon" href="/img/ymlt_logo.png">
+    <!-- Place this tag in your head or just before your close body tag. -->
+    <script async defer src="https://buttons.github.io/buttons.js"></script>
+    <title>
+        
+          一亩良田
+        
+    </title>
+
+    <link rel="canonical" href="http://wei120698598.github.io/2018/03/06/2017-12-30-blog-两年的Android成长之路/">
+
+    <!-- Bootstrap Core CSS -->
+    <link rel="stylesheet" href="/css/bootstrap.min.css">
+
+    <!-- Custom CSS --> 
+    <link rel="stylesheet" href="/css/beantech.min.css">
+    
+    <!-- Pygments Highlight CSS -->
+    <link rel="stylesheet" href="/css/highlight.css">
+
+    <link rel="stylesheet" href="/css/widget.css">
+
+    <link rel="stylesheet" href="/css/rocket.css">
+
+    <link rel="stylesheet" href="/css/signature.css">
+
+    <link rel="stylesheet" href="/css/toc.css">
+
+    <!-- Custom Fonts -->
+    <!-- <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet" type="text/css"> -->
+    <!-- Hux change font-awesome CDN to qiniu -->
+    <link href="https://cdn.staticfile.org/font-awesome/4.5.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+
+
+    <!-- Hux Delete, sad but pending in China
+    <link href='http://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/
+    css'>
+    -->
+
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+    <!-- ga & ba script hoook -->
+    <script></script>
+</head>
+
+
+<!-- hack iOS CSS :active style -->
+<body ontouchstart="">
+	<!-- Modified by Yu-Hsuan Yen -->
+<!-- Post Header -->
+<style type="text/css">
+    header.intro-header{
+        
+            background-image: url('')
+            /*post*/
+        
+    }
+    
+    #signature{
+        background-image: url('/img/signature/ymlt_white.png');
+    }
+    
+</style>
+
+<header class="intro-header" >
+    <!-- Signature -->
+    <div id="signature">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                
+                    <div class="post-heading">
+                        <div class="tags">
+                            
+                        </div>
+                        <h1></h1>
+                        <h2 class="subheading"></h2>
+                        <span class="meta">
+                            Posted by shuxin.wei on
+                            2018-03-06
+                        </span>
+                    </div>
+                
+
+
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+
+	
+    <!-- Navigation -->
+<nav class="navbar navbar-default navbar-custom navbar-fixed-top">
+    <div class="container-fluid">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header page-scroll">
+            <button type="button" class="navbar-toggle">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="/">shuxin.wei&#39;s Blog</a>
+        </div>
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <!-- Known Issue, found by Hux:
+            <nav>'s height woule be hold on by its content.
+            so, when navbar scale out, the <nav> will cover tags.
+            also mask any touch event of tags, unfortunately.
+        -->
+        <div id="huxblog_navbar">
+            <div class="navbar-collapse">
+                <ul class="nav navbar-nav navbar-right">
+                    <li>
+                        <a href="/">Home</a>
+                    </li>
+
+                    
+
+                        
+                    
+
+                        
+                        <li>
+                            <a href="/about/">About</a>
+                        </li>
+                        
+                    
+
+                        
+                        <li>
+                            <a href="/archive/">Archives</a>
+                        </li>
+                        
+                    
+
+                        
+                        <li>
+                            <a href="/tags/">Tags</a>
+                        </li>
+                        
+                    
+                    
+                </ul>
+            </div>
+        </div>
+        <!-- /.navbar-collapse -->
+    </div>
+    <!-- /.container -->
+</nav>
+<script>
+    // Drop Bootstarp low-performance Navbar
+    // Use customize navbar with high-quality material design animation
+    // in high-perf jank-free CSS3 implementation
+    var $body   = document.body;
+    var $toggle = document.querySelector('.navbar-toggle');
+    var $navbar = document.querySelector('#huxblog_navbar');
+    var $collapse = document.querySelector('.navbar-collapse');
+
+    $toggle.addEventListener('click', handleMagic)
+    function handleMagic(e){
+        if ($navbar.className.indexOf('in') > 0) {
+        // CLOSE
+            $navbar.className = " ";
+            // wait until animation end.
+            setTimeout(function(){
+                // prevent frequently toggle
+                if($navbar.className.indexOf('in') < 0) {
+                    $collapse.style.height = "0px"
+                }
+            },400)
+        }else{
+        // OPEN
+            $collapse.style.height = "auto"
+            $navbar.className += " in";
+        }
+    }
+</script>
+
+
+    <!-- Main Content -->
+    <!-- Modify by Yu-Hsuan Yen -->
+
+<!-- Post Content -->
+<article>
+    <div class="container">
+        <div class="row">
+
+            <!-- Post Container -->
+            <div class="
+                col-lg-8 col-lg-offset-2
+                col-md-10 col-md-offset-1
+                post-container">
+
+                <h1 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h1><p>又是一年，毕业就成了名副其实的程序员。两年多Android开发，从最初的小白，到现在可以自己设计一些东西；从最初面对需求的茫然，到现在游刃有余，一路的成长和成果，到此做个小结。大牛可以略过，希望能对刚刚踏上Android这条路的同学有一点点帮助。</p>
+<h2 id="Android架构的演进（一）"><a href="#Android架构的演进（一）" class="headerlink" title="Android架构的演进（一）"></a>Android架构的演进（一）</h2><p>一、架构v0.1（假装有架构）</p>
+<ol>
+<li>最初刚工作时，独立开发，并没有想太多(也不懂)，项目紧，任务重，很多东西都是自己看着人家的照葫芦画瓢，可以说并没有什么架构，但是对于当时一开始的业务还是能应对的了的。<br>网络连接利用HttpClient自己封装了一套，应对当时的项目体量还是可以，并且也做到了一些常规的功能，例如线程的变换、数据的解析这些常用的功能；图片加载在ImageLoader的基础自己也做了一层封装，应对固定的占位图等。很多这种小的功能组件都是哪里用复制到哪里，虽然麻烦，但是能解决问题。</li>
+<li>很快，随着开发进行和业务增长，问题开始出现了。</li>
+</ol>
+<blockquote>
+<pre><code>1）代码太乱     
+</code></pre><p>没有合理的封装和抽取，没有对业务功能进行划分，没有清晰的代码约束等等直接导致代码自己都懒得看，一团乱麻；<br>    2）封装的组件难以满足业务需求<br>    最致命的是对于业务开发需要不断的从复制出来的代码上进行更改，以及一些自己写的组件很难满足业务需求，导致开发进度慢，功能实现吃力，到此已经表现出力不从心；<br>    3）代码耦合严重<br>    Activity直接承担了所有业务逻辑实现，组件和业务耦合在一起，没有做区分，可重用的组件很多都是复制过去的，修改起来相当费劲；<br>    4）部分技术实现很业余<br>对于一些业务的技术实现采取了很多不合理的解决办法，直接导致代码可读性太差，很难理解实现原理；<br>    5）开发新应用需要从头来过<br>    当公司需要开发新的应用时，另一问题就出现了，一切都需要从头搭建，因为很多组件都和业务耦合在一起，没法直接拿过来用；<br>    6）整个项目是拼拼凑凑，哪有漏洞堵哪里，没有任何章法。</p>
+</blockquote>
+<p>二、架构v0.2(好像有架构)</p>
+<ol>
+<li>问题和痛点都找到了，开始重构</li>
+</ol>
+<blockquote>
+<pre><code>1）启蒙项目     
+</code></pre><p> IOS同事肖伟肖大神推荐了给我Coding<br> Android端开源项目，看完这个开源项目，虽然懵懵懂，但是也有茅塞顿开的感觉，原来还有那么多的开源框架可以使用，而且在代码的书写上也有很多新的认识，至此，初步懂得如何站在巨人的肩膀上去实现自己的目标。所以，多看他人的项目对自己成长很有帮助，特别是初学者。<br>    2）技术选型<br> 因为之前都是自己封装的组件，所以很多东西做的并不完善，这次选择开源成熟的框架。<br> 整个技术选型基本上分为：网络连接库、图片处理库、数据库操作框架、UI控件、工具库等。<br>    网络框架选用Volley，因为Volley对于初学者，使用简单，功能齐全，入门较容易，并在这之上做了一次中间层的封装，方便对网络框架的替换和统一的功能的实现。<br>    图片加载还是选用的ImageLoader，并没有太大变化，但是对内存进行了优化。     数据库那时候还没有过多使用，所以这块忽略。<br>    3）代码划分<br>    代码主要分为了业务代码还有可以复用的代码。<br>    业务代码主要按业务模块进行划分，这样的好处就是当前业务内的代码都在一起，管理方便，并且查找维护更加容易。<br>4）业务实现<br>在实现业务时，考虑的要更加全面，比如有没有更好的实现方式，业务代码能否复用，怎样实现能更好应对一些需求的变化等。</p>
+</blockquote>
+<p>2.重构完成后新的问题</p>
+<blockquote>
+<p>1）仍有大量可以封装抽取的代码<br>比如：网络请求的进度窗，错误回调的处理等<br>2）业务实现仍有可以优化的空间<br>比如：登录模块的登录和退出在整个应用任何一处都有可能调用，这样如果只是实现了登录页面的登录，那么在其他地方需要登录时还需要再次实现，退出登录更是如此，所以如何将业务拆分成可复用的代码块又是一个可优化的。<br>3）业务代码和组件代码仍有大量耦合<br>虽然开发前的规划已经想到要避免，但是实际开发中难免还是会出现，开发过程中会发现，有很多业务上的代码如果放到了组件中去处理，那么整个复杂度会降低很多，并且实现起来也容易很多，然后这将是最大的大坑，因为当组件需要多次复用时，这些业务代码将成为绊脚石，所以谨记，不要因为时间紧任务重而降低代码质量；还有其他的耦合也可能是设计上的缺陷，导致一部分业务代码一定要放在组件中。<br>4）架构不够稳定，问题频发<br>开发过程中的技术调研和技术方案的确定十分重要。例如：应用中的红点存储方案的不合理，将会给整个应用的开发带来非常多的不稳定，因为类似红点这种东西，可能出现在整个应用的任何地方，并且很可能是嵌套计数的，很多业务功能都有这种特性，所以如果没有制定好技术方案，整个后期维护和扩展会有很多壁垒。<br>5）问题难以定位和修复<br>代码的严谨并且逻辑足够的清晰，整个实现有路可寻，那么问题定位就要容易的多，如果实现混乱，可能导致问题出现的地方过多，将给问题定位带来极高的难度，并且修复时很可能不能全面修复和引发新的问题。代码的耦合也会是问题定位和修复的障碍，并且没有任何的设计模式，也会导致个别类的的体量很大，可读性很差。</p>
+</blockquote>
+<p>3.随着学会的东西越来越多，再次重新设计架构势不可挡。<br>最新的架构将写在下一篇博客，并且是更偏向技术的博客，本篇博客作为成长历程的博客，很多东西记不清，写不全，欢迎提出问题。</p>
+
+                
+
+                <hr>
+                <!-- Pager -->
+                <ul class="pager">
+                    
+                    
+                        <li class="next">
+                            <a href="/2017/11/22/2017-11-22-blog-免费搭建属于自己的博客/" data-toggle="tooltip" data-placement="top" title="搭建博客教程那么多，还是一波三折">Next Post &rarr;</a>
+                        </li>
+                    
+                </ul>
+
+                <!-- duoshuo Share start -->
+                
+                <!-- 多说 Share end-->
+
+                <!-- 多说评论框 start -->
+                
+                <!-- 多说评论框 end -->
+
+                <!-- disqus comment start -->
+                
+                    <div class="comment">
+                        <div id="disqus_thread" class="disqus-thread"></div>
+                    </div>
+                
+                <!-- disqus comment end -->
+            </div>
+            
+            <!-- Tabe of Content -->
+            <!-- Table of Contents -->
+
+                
+            <!-- Sidebar Container -->
+            <div class="
+                col-lg-8 col-lg-offset-2
+                col-md-10 col-md-offset-1
+                sidebar-container">
+
+                <!-- Featured Tags -->
+                
+                <section>
+                    <!-- no hr -->
+                    <h5><a href="/tags/">FEATURED TAGS</a></h5>
+                    <div class="tags">
+                       
+                    </div>
+                </section>
+                
+
+                <!-- Friends Blog -->
+                
+                <hr>
+                <h5>FRIENDS</h5>
+                <ul class="list-inline">
+
+                    
+                        <li><a href="http://github.com/wei120698598" target="_blank">Github</a></li>
+                    
+                        <li><a href="https://www.jianshu.com/users/8da334b68826" target="_blank">简书</a></li>
+                    
+                        <li><a href="#" target="_blank">It Helps SEO</a></li>
+                    
+                </ul>
+                
+            </div>
+        </div>
+    </div>
+</article>
+
+
+
+
+<!-- disqus embedded js code start (one page only need to embed once) -->
+<script type="text/javascript">
+    /* * * CONFIGURATION VARIABLES * * */
+    var disqus_shortname = "wei120698598";
+    var disqus_identifier = "http://wei120698598.github.io/2018/03/06/2017-12-30-blog-两年的Android成长之路/";
+    var disqus_url = "http://wei120698598.github.io/2018/03/06/2017-12-30-blog-两年的Android成长之路/";
+
+    (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+</script>
+<!-- disqus embedded js code start end -->
+
+
+
+
+<!-- async load function -->
+<script>
+    function async(u, c) {
+      var d = document, t = 'script',
+          o = d.createElement(t),
+          s = d.getElementsByTagName(t)[0];
+      o.src = u;
+      if (c) { o.addEventListener('load', function (e) { c(null, e); }, false); }
+      s.parentNode.insertBefore(o, s);
+    }
+</script>
+<!-- anchor-js, Doc:http://bryanbraun.github.io/anchorjs/ -->
+<script>
+    async("https://cdn.bootcss.com/anchor-js/1.1.1/anchor.min.js",function(){
+        anchors.options = {
+          visible: 'hover',
+          placement: 'left',
+          icon: 'ℬ'
+        };
+        anchors.add().remove('.intro-header h1').remove('.subheading').remove('.sidebar-container h5');
+    })
+</script>
+<style>
+    /* place left on bigger screen */
+    @media all and (min-width: 800px) {
+        .anchorjs-link{
+            position: absolute;
+            left: -0.75em;
+            font-size: 1.1em;
+            margin-top : -0.1em;
+        }
+    }
+</style>
+
+
+
+    <!-- Footer -->
+    <!-- Footer -->
+<footer>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <ul class="list-inline text-center">
+                    
+                    <li>
+                        <a target="_blank" href="https://www.jianshu.com/users/8da334b68826">
+                                    <span class="fa-stack fa-lg">
+                                        <i class="fa fa-circle fa-stack-2x"></i>
+                                        <i class="fa  fa-stack-1x fa-inverse">简</i>
+                                    </span>
+                        </a>
+                    </li>
+                    
+                    
+                    
+                    
+
+                    
+
+                    
+
+                    
+                    <li>
+                        <a target="_blank" href="https://github.com/wei120698598">
+                            <span class="fa-stack fa-lg">
+                                <i class="fa fa-circle fa-stack-2x"></i>
+                                <i class="fa fa-github fa-stack-1x fa-inverse"></i>
+                            </span>
+                        </a>
+                    </li>
+                    
+
+                    
+
+                </ul>
+                <p class="copyright text-muted">
+                    Copyright &copy; shuxin.wei 2018
+                    <br>
+                    Theme by <a href="http://wsymlt.me">一亩良田</a>
+                    <span style="display: inline-block; margin: 0 5px;">
+                        <i class="fa fa-heart"></i>
+                    </span>
+                    <!--re-Ported by <a href="http://beantech.org">BeanTech</a> | -->
+                    <iframe
+                            style="margin-left: 2px; margin-bottom:-5px;"
+                            frameborder="0" scrolling="0" width="91px" height="20px"
+                            src="https://ghbtns.com/github-btn.html?user=wei120698598&repo=wei120698598.github.io&type=star&count=true">
+                    </iframe>
+                </p>
+            </div>
+        </div>
+    </div>
+</footer>
+
+<!-- jQuery -->
+<script src="/js/jquery.min.js"></script>
+
+<!-- Bootstrap Core JavaScript -->
+<script src="/js/bootstrap.min.js"></script>
+
+<!-- Custom Theme JavaScript -->
+<script src="/js/hux-blog.min.js"></script>
+
+
+<!-- async load function -->
+<script>
+    function async(u, c) {
+        var d = document, t = 'script',
+            o = d.createElement(t),
+            s = d.getElementsByTagName(t)[0];
+        o.src = u;
+        if (c) {
+            o.addEventListener('load', function (e) {
+                c(null, e);
+            }, false);
+        }
+        s.parentNode.insertBefore(o, s);
+    }
+</script>
+
+<!-- 
+     Because of the native support for backtick-style fenced code blocks 
+     right within the Markdown is landed in Github Pages, 
+     From V1.6, There is no need for Highlight.js, 
+     so Huxblog drops it officially.
+
+     - https://github.com/blog/2100-github-pages-now-faster-and-simpler-with-jekyll-3-0  
+     - https://help.github.com/articles/creating-and-highlighting-code-blocks/    
+-->
+<!--
+    <script>
+        async("http://cdn.bootcss.com/highlight.js/8.6/highlight.min.js", function(){
+            hljs.initHighlightingOnLoad();
+        })
+    </script>
+    <link href="http://cdn.bootcss.com/highlight.js/8.6/styles/github.min.css" rel="stylesheet">
+-->
+
+
+<!-- jquery.tagcloud.js -->
+<script>
+    // only load tagcloud.js in tag.html
+    if ($('#tag_cloud').length !== 0) {
+        async("http://wei120698598.github.io/js/jquery.tagcloud.js", function () {
+            $.fn.tagcloud.defaults = {
+                //size: {start: 1, end: 1, unit: 'em'},
+                color: {start: '#bbbbee', end: '#0085a1'},
+            };
+            $('#tag_cloud a').tagcloud();
+        })
+    }
+</script>
+
+<!--fastClick.js -->
+<script>
+    async("https://cdn.bootcss.com/fastclick/1.0.6/fastclick.min.js", function () {
+        var $nav = document.querySelector("nav");
+        if ($nav) FastClick.attach($nav);
+    })
+</script>
+
+
+<!-- Google Analytics -->
+
+
+
+
+<!-- Baidu Tongji -->
+
+<script>
+    // dynamic User by Hux
+    var _baId = 'a2f2ce6960b5de3bf9719e9ce3fe79e1';
+
+    // Originial
+    var _hmt = _hmt || [];
+    (function () {
+        var hm = document.createElement("script");
+        hm.src = "//hm.baidu.com/hm.js?" + _baId;
+        var s = document.getElementsByTagName("script")[0];
+        s.parentNode.insertBefore(hm, s);
+    })();
+</script>
+
+
+
+
+
+
+	<a id="rocket" href="#top" class=""></a>
+	<script type="text/javascript" src="/js/totop.js?v=1.0.0" async=""></script>
+    <script type="text/javascript" src="/js/toc.js?v=1.0.0" async=""></script>
+<!-- Image to hack wechat -->
+<img src="http://wei120698598.github.io/img/icon_wechat.png" width="0" height="0" />
+<!-- Migrate from head to bottom, no longer block render and still work -->
+
+</body>
+
+</html>
